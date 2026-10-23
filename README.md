@@ -1,10 +1,18 @@
 # Configurable Duration Gauge for FlowFuse Dashboard
 
-A third-party widget derived from the official `ui-gauge`. It retains the upstream
-components, styles, gauge types (Half, 3/4, Tile, Battery, and Tank), segments,
-typed inputs, and dynamic properties. It adds a **Duration (ms)** editor setting
-for the Half and 3/4 gauges, with both Needle and Rounded styles.
+This is a **copy of the official FlowFuse Dashboard `ui-gauge` widget**, adapted
+as an independent third-party package, **with configurable animation duration**
+for the arc and needle.
 
+Original source: [FlowFuse/node-red-dashboard — ui-gauge](https://github.com/FlowFuse/node-red-dashboard/tree/main/ui/src/widgets/ui-gauge).
+The original widget was created by the FlowFuse Dashboard contributors. This
+package is an independent modification, with the original Apache-2.0 license and
+attribution preserved; see [NOTICE](NOTICE) and [UPSTREAM.md](UPSTREAM.md).
+
+The added setting is **Duration (ms)** for Half and 3/4 gauges, with both Needle
+and Rounded styles. It exposes the duration already used by the original
+`update(value, duration = 1000)` method. The copied gauge types, styles, segments,
+typed inputs, and existing dynamic properties are retained.
 - Default: `1000` ms, matching the original behavior.
 - `0`: update without animation.
 - Accepts finite numbers greater than or equal to zero.
