@@ -18,9 +18,15 @@ Requires Node-RED 3+ and an existing installation of
 `@flowfuse/node-red-dashboard` 1.34.0 or later.
 This package supports FlowFuse Dashboard (Dashboard 2).
 
-Until the package is published on npm, install the compiled `.tgz` downloaded from
-[GitHub Releases](https://github.com/MarcioBulla/node-red-dashboard-2-ui-gauge-duration/releases)
-from your Node-RED user directory:
+Install from your Node-RED user directory:
+
+```sh
+cd ~/.node-red
+npm install node-red-dashboard-2-ui-gauge-duration
+```
+
+Alternatively, install the compiled `.tgz` downloaded from
+[GitHub Releases](https://github.com/MarcioBulla/node-red-dashboard-2-ui-gauge-duration/releases):
 
 ```sh
 cd ~/.node-red
@@ -85,5 +91,7 @@ the native `ui-gauge` type in 3/4 mode. For the same height with this widget,
 explicitly set the height to **3** instead of automatic in that case.
 
 Automated tests cover the runtime with a simulated Dashboard API and the compiled
-Vue components in a simulated DOM. Appearance and integration in a real Node-RED
-instance still need to be checked in your environment.
+Vue components in a simulated DOM. A local smoke test with Node-RED 4 and Dashboard
+1.34.0 also verified node loading, widget registration, dynamic duration state,
+and HTTP delivery of the Dashboard and widget bundle. Visual appearance still
+needs to be checked in your environment.
