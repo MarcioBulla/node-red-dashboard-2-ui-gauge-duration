@@ -38,7 +38,7 @@ Alternatively, install the compiled `.tgz` downloaded from
 
 ```sh
 cd ~/.node-red
-npm install /path/to/node-red-dashboard-2-ui-gauge-duration-0.1.1.tgz
+npm install /path/to/node-red-dashboard-2-ui-gauge-duration-0.1.2.tgz
 ```
 
 Restart Node-RED. Add **gauge duration** from the Dashboard category, select a group,
