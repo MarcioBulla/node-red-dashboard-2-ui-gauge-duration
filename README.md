@@ -13,12 +13,31 @@ The added setting is **Duration (ms)** for Half and 3/4 gauges, with both Needle
 and Rounded styles. It exposes the duration already used by the original
 `update(value, duration = 1000)` method. The copied gauge types, styles, segments,
 typed inputs, and existing dynamic properties are retained.
+
 - Default: `1000` ms, matching the original behavior.
 - `0`: update without animation.
 - Accepts finite numbers greater than or equal to zero.
 - Duration controls the D3 arc and needle transitions. It does not change the
   Tank waves or animations in other gauge types.
 - Initial rendering and resizing continue to use duration `0`.
+
+## Duration Comparison
+
+Both recordings compare **1000 ms**, **500 ms**, **100 ms**, and **0 ms** using
+half gauges with the needle style. Shorter durations reach the target sooner;
+`0 ms` updates immediately. The initial wait has been trimmed from both GIFs.
+
+### Variable Values
+
+Watch the arc and needle respond to changes in the displayed value at each duration.
+
+![Four gauges comparing 1000, 500, 100, and 0 ms animation durations with variable values](https://raw.githubusercontent.com/MarcioBulla/node-red-dashboard-2-ui-gauge-duration/main/docs/images/duration-comparison-variable-values.gif)
+
+### Step Changes
+
+Compare the transition speed when the value jumps between the minimum and maximum.
+
+![Four gauges comparing 1000, 500, 100, and 0 ms animation durations during step changes](https://raw.githubusercontent.com/MarcioBulla/node-red-dashboard-2-ui-gauge-duration/main/docs/images/duration-comparison-step-change.gif)
 
 ## Installation
 
@@ -38,7 +57,7 @@ Alternatively, install the compiled `.tgz` downloaded from
 
 ```sh
 cd ~/.node-red
-npm install /path/to/node-red-dashboard-2-ui-gauge-duration-0.1.2.tgz
+npm install /path/to/node-red-dashboard-2-ui-gauge-duration-0.1.3.tgz
 ```
 
 Restart Node-RED. Add **gauge duration** from the Dashboard category, select a group,
