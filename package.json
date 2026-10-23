@@ -1,0 +1,76 @@
+{
+  "name": "node-red-dashboard-2-ui-gauge-duration",
+  "version": "0.1.1",
+  "description": "FlowFuse Dashboard gauge with configurable arc and needle animation duration",
+  "license": "Apache-2.0",
+  "keywords": [
+    "node-red",
+    "node-red-dashboard-2",
+    "gauge"
+  ],
+  "files": [
+    "nodes",
+    "ui",
+    "resources",
+    "LICENSE",
+    "NOTICE",
+    "UPSTREAM.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "test": "node --test test/*.test.cjs",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "peerDependencies": {
+    "@flowfuse/node-red-dashboard": ">=1.34.0"
+  },
+  "peerDependenciesMeta": {
+    "@flowfuse/node-red-dashboard": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "vite": "^6.4.4",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "sass": "^1.96.0",
+    "d3": "^7.9.0",
+    "vue": "^3.5.25",
+    "vuex": "^4.1.0",
+    "jsdom": "^26.1.0"
+  },
+  "node-red": {
+    "version": ">=3.0.0",
+    "nodes": {
+      "ui-gauge-duration": "nodes/ui-gauge-duration.js"
+    }
+  },
+  "node-red-dashboard-2": {
+    "version": "1.34.0",
+    "widgets": {
+      "ui-gauge-duration": {
+        "output": "ui-gauge-duration.umd.js",
+        "component": "UIGaugeDuration"
+      }
+    }
+  },
+  "author": {
+    "name": "Marcio Bulla",
+    "url": "https://github.com/MarcioBulla"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcioBulla/node-red-dashboard-2-ui-gauge-duration.git"
+  },
+  "homepage": "https://github.com/MarcioBulla/node-red-dashboard-2-ui-gauge-duration#readme",
+  "bugs": {
+    "url": "https://github.com/MarcioBulla/node-red-dashboard-2-ui-gauge-duration/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
